@@ -1,0 +1,139 @@
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.envelope-icon {
+  position: absolute;
+  bottom: 40px;
+  right: 200px;
+  width: 250px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* ENVELOPE CONTAINER */
+.envelope-center {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform: translateY(100vh);
+}
+
+/* BODY */
+.envelope-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #cd9b56;
+  border-radius: 8px;
+  z-index: 3;
+}
+
+/* FLAP */
+.envelope-flap {
+  top: 1px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #a4732e;
+  clip-path: polygon(0 0, 50% 60%, 100% 0);
+  transform-origin: top center;
+  z-index: 4;
+}
+
+/* LETTER */
+.letter {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 220px;
+  height: 150px;
+  background: #fffaf0;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.letter-content {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* KEYFRAMES */
+
+@keyframes riseUp {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(0); }
+}
+
+@keyframes openFlap {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(-160deg); z-index: 1;}
+}
+
+@keyframes paperOut {
+  from { transform: translate(-50%, 100%); }
+  to { transform: translate(-50%, 40%); }
+}
+
+@keyframes envelopeDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(100vh); }
+}
+
+@keyframes zoomPaper {
+  from {
+    transform: translate(-50%, 40%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.8); 
+  }
+}
+
+.stage-rise {
+  animation: riseUp 0.7s forwards ease-out;
+}
+
+.stage-open .envelope-flap {
+  animation: openFlap 0.6s forwards ease-in-out;
+}
+
+.stage-paper .letter {
+  animation: paperOut 0.6s forwards ease-out;
+}
+
+.stage-down {
+  animation: envelopeDown 0.7s forwards ease-in;
+}
+
+.stage-zoom .letter {
+  animation: zoomPaper 0.6s forwards ease-out;
+}
+
+.stage-zoom .letter-content {
+  opacity: 1;
+}
+
+.stage-zoom .envelope-body,
+.stage-zoom .envelope-flap {
+  opacity: 0;
+}
