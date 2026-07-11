@@ -157,3 +157,39 @@ body{
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
+
+@media (max-width: 768px) {
+    .body2 {
+        position: static;
+        padding: 20px;
+        left: 0;
+        top: 0;
+    }
+
+    .body2 p {
+        font-size: 18px;
+    }
+
+    .hoverable span {
+        font-size: 14px;
+    }
+
+    .hoverable img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .character-gif {
+        display: none;
+    }
+
+    .circle {
+        height: 50px;
+        width: 50px;
+    }
+}
