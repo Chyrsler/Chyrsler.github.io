@@ -1,0 +1,159 @@
+/*Page 1*/
+
+body{
+    overflow-x: hidden;
+}
+.body2 {
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: stretch;   
+    margin: 0;
+    background-color: #384959;
+    gap: 0px;
+
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+.body2 p{
+    color: #bdddfc;
+    font-size: 30px;
+}
+
+.body2 h3{
+    color: #bdddfc;
+}
+
+.lang-list {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.hoverable {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #f0f0f0;
+    border-radius: 30px;
+    padding: 10px 15px 10px 15px;
+    cursor: default;
+}
+
+.hoverable img {
+    width: 28px;
+    height: 28px;
+}
+
+.hoverable span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.hoverable:hover {
+    transform: scale(1.05);
+    background: #e0e0e0;
+}
+
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+.project-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    display: block;
+    text-decoration: none;
+    background-color: #212a33;
+    border-radius: 12px;
+    width: 400px;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.project-card .preview {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background-color: #384959;
+}
+
+.project-card .card-body {
+    padding: 16px 20px 20px 20px;
+}
+
+.project-card h3 {
+    color: #bdddfc;
+    font-size: 20px;
+    margin: 0 0 12px 0;
+}
+
+.project-card p {
+    color: #8fa3b3;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 18px 0;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    border: 1px solid #bdddfc;
+    color: #bdddfc;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-card:hover .tag {
+    background: #bdddfc;
+    color: #212a33;
+}
+
+.character-gif {
+    height: 400px;
+    position: absolute;
+    top: 200px;   /* distance from top of the page/container */
+    left: 875px;  /* distance from right edge */
+}
+
+.circle {
+    display: flex;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 20px;       
+    right: 20px;             
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;       
+}
+
+.circle:hover{
+    background-color: #ffffffbd;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
