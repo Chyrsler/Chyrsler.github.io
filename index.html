@@ -9,7 +9,7 @@
 </head>
 
 <body class="body2">
-    <audio id="bgMusic" autoplay muted loop>
+    <audio id="bgMusic" autoplay muted loop preload="auto">
         <source src="bg_music.m4a" type="audio/mp4">
         Your browser does not support the audio element.
     </audio>
@@ -197,6 +197,7 @@
             const circle = document.querySelector('.circle');
             circle.addEventListener('click', () => {
                 audio.muted = !audio.muted;
+                audio.play().catch(err => console.log('Playback blocked:', err));
             });
         });
     </script>
