@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal</title>
-    <link rel="stylesheet" href="design.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body class="body2">
@@ -114,6 +114,41 @@
     </div>
 
     <div class="project-list">
+        <a href="https://github.com/Chyrsler/Kexo-The-Bot" target="_blank" class="project-card">
+            <img class="preview" src="ProjectImg/PythonC/Kexo.png" alt="Kexo">
+            <div class="card-body">
+                <h3>Kexo The Bot</h3>
+                <p>My first ever competition project Code Olympiad 2023 by coding bee! This was during my sophomore year in highschool! It also won favourites!</p>
+                <div class="tag-list">
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://github.com/Chyrsler/C-PROJECT" target="_blank" class="project-card">
+            <img class="preview" src="ProjectImg/PythonC/MazeRunner.png" alt="Maze runner">
+            <div class="card-body">
+                <h3>Blind Maze Runner</h3>
+                <p>A university project, making a game about traversing a maze while blind in C language! Watch out, there might be some enemies lurking in the dark...</p>
+                <div class="tag-list">
+                    <span class="tag">C</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="project-list">
+        <!-- <a href="https://youtu.be/Ma1QK68O-EI" target="_blank" class="project-card">
+            <img class="preview" src="ProjectImg/Blender/Birthday.png" alt="Birthday">
+            <div class="card-body">
+                <h3>Birthday</h3>
+                <p>A birthday present for my gf! She's the best and i've decided i wanted to do something special for her birthday, here's the final render for it!</p>
+                <div class="tag-list">
+                    <span class="tag">Blender</span>
+                </div>
+            </div>
+        </a> -->
+
         <a href="https://youtu.be/SxaEJ6BJE2M" target="_blank" class="project-card">
             <img class="preview" src="ProjectImg/Unity/Outofplace.png" alt="Out of place">
             <div class="card-body">
@@ -137,38 +172,15 @@
                 </div>
             </div>
         </a>
-    </div>
 
-    <div class="project-list">
-        <a href="https://github.com/Chyrsler/Kexo-The-Bot" target="_blank" class="project-card">
-            <img class="preview" src="ProjectImg/PythonC/Kexo.png" alt="Kexo">
+        <a href="https://www.youtube.com/watch?v=qun6aEm-O5E" target="_blank" class="project-card">
+            <img class="preview" src="ProjectImg/Unity/Boba Adventure.png" alt="Boba">
             <div class="card-body">
-                <h3>Kexo The Bot</h3>
-                <p>My first ever competition project Code Olympiad 2023 by coding bee! This was during my sophomore year in highschool! It also won favourites!</p>
+                <h3>Boba's Adventure</h3>
+                <p>(I couldn't come up with a good name with this project), This was my first ever solo unity project back when i was still in the first year in high school! Click here for more info</p>
                 <div class="tag-list">
-                    <span class="tag">Python</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="https://github.com/Chyrsler/C-PROJECT" target="_blank" class="project-card">
-            <img class="preview" src="ProjectImg/PythonC/MazeRunner.png" alt="Maze runner">
-            <div class="card-body">
-                <h3>Blind Maze Runner</h3>
-                <p>A university project, making a game about traversing a maze while blind in C language! Watch out, there might be some enemies lurking in the dark...</p>
-                <div class="tag-list">
-                    <span class="tag">C</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="https://youtu.be/Ma1QK68O-EI" target="_blank" class="project-card">
-            <img class="preview" src="ProjectImg/Blender/Birthday.png" alt="Birthday">
-            <div class="card-body">
-                <h3>Birthday</h3>
-                <p>A birthday present for my gf! She's the best and i've decided i wanted to do something special for her birthday, here's the final render for it!</p>
-                <div class="tag-list">
-                    <span class="tag">Blender</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">Unity</span>
                 </div>
             </div>
         </a>
@@ -176,29 +188,9 @@
 
     <div class="circle"></div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const audio = document.getElementById('bgMusic');
-            audio.volume = 0.3;
-
-            function unmuteAudio() {
-                audio.muted = false;
-                audio.play();
-                document.removeEventListener('click', unmuteAudio);
-                document.removeEventListener('scroll', unmuteAudio);
-                document.removeEventListener('keydown', unmuteAudio);
-            }
-
-            document.addEventListener('click', unmuteAudio);
-            document.addEventListener('scroll', unmuteAudio);
-            document.addEventListener('keydown', unmuteAudio);
-
-            const circle = document.querySelector('.circle');
-            circle.addEventListener('click', () => {
-                audio.muted = !audio.muted;
-                audio.play().catch(err => console.log('Playback blocked:', err));
-            });
-        });
-    </script>
+    <p style="text-align:center; padding: 12px; font-size: 13px; color: #888;">
+    New Blender showcase page is up,
+    <a href="blender.html" style="color:#4ea1ff;">check it out here</a>
+    </p>
 </body>
 </html>

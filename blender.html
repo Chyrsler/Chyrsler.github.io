@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Stage</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="css/stage.css">
+  <script src="js/stage.js" defer></script>
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- LEFT: grid of selectable project thumbnails -->
+    <div class="left-panel">
+      <h2>Projects</h2>
+      <p class="sub">Select a model to view it on the stage</p>
+      <div class="thumb-grid" id="thumbGrid"></div>
+    </div>
+
+    <!-- RIGHT STAGE: spinning model + info card -->
+    <div class="stage">
+      <div class="spotlight"></div>
+      <div class="platform"></div>
+      <model-viewer id="modelEl"
+        src=""
+        auto-rotate
+        auto-rotate-delay="0"
+        rotation-per-second="45deg"
+        disable-zoom
+        interaction-prompt="none"
+        shadow-intensity="0"
+        exposure="1">
+      </model-viewer>
+
+      <div class="info-card">
+        <div class="card-view card-view-default" id="defaultView">
+          <h3 id="titleEl"></h3>
+          <p id="descEl"></p>
+          <div class="card-buttons">
+            <button id="infoBtn" class="card-btn btn-green">Info</button>
+            <button id="youtubeBtn" class="card-btn btn-red">YouTube</button>
+          </div>
+        </div>
+
+        <div class="card-view card-view-detail" id="detailView" hidden>
+          <h3 id="detailTitleEl"></h3>
+          <p id="detailTextEl"></p>
+          <div class="card-buttons">
+            <button id="backBtn" class="card-btn btn-back">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

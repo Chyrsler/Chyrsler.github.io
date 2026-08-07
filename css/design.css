@@ -137,8 +137,10 @@ body{
 .character-gif {
     height: 400px;
     position: absolute;
-    top: 200px;   /* distance from top of the page/container */
-    left: 875px;  /* distance from right edge */
+    top: 200px;
+    left: 875px;
+    pointer-events: none;
+    user-select: none;  
 }
 
 .circle {
